@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-11-18 一 10:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="yang zhe" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6aafa2f">1. Sui ZkLogin Introduction</a>
+<ul>
+<li><a href="#orgdfb30f4">1.1. The Sui blockchain</a></li>
+<li><a href="#orgd200794">1.2. Signatures</a></li>
+<li><a href="#org0d98189">1.3. ZkLogin</a>
+<ul>
+<li><a href="#org69386dd">1.3.1. the complete zkLogin Flow</a></li>
+<li><a href="#org284d644">1.3.2. Entities</a></li>
+</ul>
+</li>
+<li><a href="#orgf8b51dd">1.4. Sui zkLogin vs Polygon Did vs Fireblocks Ncw</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6aafa2f" class="outline-2">
+<h2 id="org6aafa2f"><span class="section-number-2">1.</span> Sui ZkLogin Introduction</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgdfb30f4" class="outline-3">
+<h3 id="orgdfb30f4"><span class="section-number-3">1.1.</span> The Sui blockchain</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Sui is defined as a Layer 1 protocol blockchain. In basic terms, this means that
+Sui performs its own consensus and validation for transaction blocks (activity)
+on its networks using its own native token (SUI).
+</p>
+</div>
+</div>
+<div id="outline-container-orgd200794" class="outline-3">
+<h3 id="orgd200794"><span class="section-number-3">1.2.</span> Signatures</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+When a user submits a signed transaction, a serialized signature and a
+serialized transaction data is submitted. The serialized transaction data is the
+BCS serialized bytes of the struct TransactionData and the serialized signature
+is defined as a concatenation of bytes of flag || sig || pk.
+</p>
+
+<p>
+The flag is a 1-byte representation corresponding to the signature scheme that
+the signer chooses. The following table lists each signing scheme and its
+corresponding flag:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Scheme</th>
+<th scope="col" class="org-right">Flag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Ed25519 Pure</td>
+<td class="org-right">0x00</td>
+</tr>
+
+<tr>
+<td class="org-left">EDCDSA Secp256k1</td>
+<td class="org-right">0x01</td>
+</tr>
+
+<tr>
+<td class="org-left">EDCDSA Secp256r1</td>
+<td class="org-right">0x02</td>
+</tr>
+
+<tr>
+<td class="org-left">multisig</td>
+<td class="org-right">0x03</td>
+</tr>
+
+<tr>
+<td class="org-left">zkLogin</td>
+<td class="org-right">0x05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org0d98189" class="outline-3">
+<h3 id="org0d98189"><span class="section-number-3">1.3.</span> ZkLogin</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+ZkLogin is a Sui primitive that provides the ability for you to send
+transactions from a Sui address using an OAuth credential, without publicly
+linking the two.
+</p>
+
+<p>
+zkLogin is designed with the following goals in mind:
+</p>
+
+<ul class="org-ul">
+<li>Streamlined onboarding: zkLogin enables you to transact on Sui using the
+familiar OAuth login flow, eliminating the friction of handling cryptographic
+keys or remembering mnemonics.</li>
+<li>Self-custody: A zkLogin transaction requires user approval via the standard
+OAuth login process&#x2013;the OAuth provider cannot transact on the user's behalf.</li>
+<li>Security: zkLogin is a two-factor authentication scheme; sending a
+transaction requires both a credential from a recent OAuth login and a salt
+not managed by the OAuth provider. An attacker who compromises an OAuth
+account cannot transact from the user's corresponding Sui address unless they
+separately compromise the salt.</li>
+<li>Privacy: Zero-knowledge proofs prevent third parties from linking a Sui
+address with its corresponding OAuth identifier.</li>
+<li>Optional verified identity: A user can opt in to verify the OAuth identifier
+that was used to derive a particular Sui address. This serves as the
+foundation for a verifiable on-chain identity layer.</li>
+<li>Accessibility: zkLogin is one of several native Sui signature schemes thanks
+to Sui's cryptography agility. It integrates with other Sui primitives, like
+sponsored transactions and multisig.</li>
+<li>Rigorousness: The code for zkLogin has been independently audited by two
+firms specializing in zero knowledge. The public zkLogin ceremony for
+creating the common reference string attracted contributions from more than
+100 participants.</li>
+</ul>
+</div>
+<div id="outline-container-org69386dd" class="outline-4">
+<h4 id="org69386dd"><span class="section-number-4">1.3.1.</span> the complete zkLogin Flow</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+<img src="Sui_ZkLogin_Introduction/2024-11-17_11-38-48_zkLogin.png" alt="2024-11-17_11-38-48_zkLogin.png" />
+(Step 0) We use Groth16 for our protocol’s zkSNARK instantiation, requiring a
+singular generation of a structured common reference string (CRS) linked to the
+circuit. A ceremony is conducted to generate the CRS, which is used to produce
+the proving key in the ZK Proving Service, the verifying key in Sui Authority.
+</p>
+
+<p>
+(Step 1) Generate Ephemeral Key Pair (eph<sub>sk</sub>, eph<sub>pk</sub>). The ephemeral key pair is
+used to sign the TransactionBlock. Store in the browser session. (Session
+Storage)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js"><span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">PrivateKey</span>
+<span style="color: #4f97d7;">{</span><span style="color: #2d9574;">"schema"</span>:<span style="color: #2d9574;">"ED25519"</span>,<span style="color: #2d9574;">"privateKey"</span>:<span style="color: #2d9574;">"3tYumE6Nq2SPsy+Y/WGtRMCCUhvEDw19HfqVrg4mFjU="</span><span style="color: #4f97d7;">}</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">PublicKey:</span>
+<span style="color: #2d9574;">"dFE3jQlT9d6paYYwwyN685SoubedBWhIcMJBSS5BQXo="</span>
+</pre>
+</div>
+
+<p>
+(Step 2) Fetch JWT(from OpenID Provider)
+Require parameters:
+</p>
+<ol class="org-ol">
+<li><code>$CLIENT_ID</code> (Obtained by applying for OpenID Service.)</li>
+<li><code>$REDIRECT_URL</code> (App Url, configured in OpenID Service)</li>
+<li>$NONCE (Generated through ephemeralKeyPair, maxEpoch, randomness)</li>
+<li>ephemeralKeyPair: Ephemeral key pair generated in the step 1</li>
+<li>maxEpoch: Validity period of the ephemeral key pair</li>
+<li>randomness: Randomness</li>
+</ol>
+<p>
+We can fetch current Epoch via Sui Client, su as it’s 61
+Assuming the validity period is set to 10 Epochs, then maxEpoch: 71
+we can generate randomness:
+</p>
+<div class="org-src-container">
+<pre class="src src-js">  &#8203;&#8203;
+<span style="color: #4f97d7; font-weight: bold;">import</span> <span style="color: #4f97d7;">{</span> generateRandomness <span style="color: #4f97d7;">}</span> from <span style="color: #2d9574;">'@mysten/zklogin'</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">randomness</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">randomness</span> = generateRandomness<span style="color: #4f97d7;">()</span>;
+</pre>
+</div>
+
+<p>
+randomness: 231517808180551391891007165132990504424
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js"><span style="color: #4f97d7; font-weight: bold;">import</span> <span style="color: #4f97d7;">{</span> generateNonce <span style="color: #4f97d7;">}</span> from <span style="color: #2d9574;">"@mysten/zklogin"</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Generate Nonce for acquiring JWT:</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">nonce</span> = generateNonce<span style="color: #4f97d7;">(</span>
+  ephemeralKeyPair.getPublicKey<span style="color: #bc6ec5;">()</span>,
+  maxEpoch,
+  randomness
+<span style="color: #4f97d7;">)</span>;
+
+</pre>
+</div>
+
+<p>
+so we can get nonce: ly2KYOS6cyriaGNYlQ9l3GHxj98
+</p>
+
+<p>
+(Step 3) Get and Decode JWT (needed for assembling zKLogin signature later)
+</p>
+
+<p>
+So we can get the <code>id_token</code> and decode it to JWT payload
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js"><span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">id_token Header.Payload.Signature</span>
+<span style="color: #2d9574;">"eyJhbGciOiJSUzI1NiIsImtpZCI6IjFkYzBmMTcyZThkNmVmMzgyZDZkM2EyMzFmNmMxOTdkZDY4Y2U1ZWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI1NzMxMjAwNzA4NzEtMGs3Z2E2bnM3OWllMGpwZzFlaTZpcDV2amUyb3N0dDYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI1NzMxMjAwNzA4NzEtMGs3Z2E2bnM3OWllMGpwZzFlaTZpcDV2amUyb3N0dDYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDYwMDgyOTIzNjcyNTMyNzI2NDQiLCJub25jZSI6Imx5MktZT1M2Y3lyaWFHTllsUTlsM0dIeGo5OCIsIm5iZiI6MTczMTU2OTk4NiwiaWF0IjoxNzMxNTcwMjg2LCJleHAiOjE3MzE1NzM4ODYsImp0aSI6IjY1ZjhlMzE1NWM0NWNkYmViMjBmODBmZDliYzhlMzQ0NzYyZDEwYzcifQ.GQXSw0YlP6BBrQOb_4zTojZ6MuShmuzn7ZJh-3cQhw0KYX2W5X8NlGodJvVUfLHqlwoX4lN1Gf-J0_3Qjui9A0Unr4f7PGLJnlitrd_3m7Ea2M9c-WSgV8801qh-7oupHwNRF9WpeHV6TWQ9sQVfg0s33DKsYKmnN6XRM1VN1igAdd_uxFmRrzOKc4cpFQSi_9urFTWxnMCxwvNtFizq55NpTQl090NbAQs4mdceb-z9VnqixQa_ACdm2OqUHkR7vvoRor9alHEaWMB6a7Gxc9xvSznfSVQZUKYCVmql4mcsdpApJi40aCaqskhual99ckl-Q0FSAOhpMG8Id1Y5Xw"</span>
+
+<span style="color: #4f97d7; font-weight: bold;">import</span> <span style="color: #4f97d7;">{</span> JwtPayload, jwtDecode <span style="color: #4f97d7;">}</span> from <span style="color: #2d9574;">"jwt-decode"</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">jwtPayload</span> = jwtDecode<span style="color: #4f97d7;">(</span>id_token<span style="color: #4f97d7;">)</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">decodedJwt</span> = jwt_decode<span style="color: #4f97d7;">(</span>jwtPayload<span style="color: #4f97d7;">)</span> as JwtPayload;
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">JWT Payload</span>
+<span style="color: #4f97d7;">{</span>
+  <span style="color: #2d9574;">"iss"</span>: <span style="color: #2d9574;">"https://accounts.google.com"</span>,
+  <span style="color: #2d9574;">"azp"</span>: <span style="color: #2d9574;">"573120070871-0k7ga6ns79ie0jpg1ei6ip5vje2ostt6.apps.googleusercontent.com"</span>,
+  <span style="color: #2d9574;">"aud"</span>: <span style="color: #2d9574;">"573120070871-0k7ga6ns79ie0jpg1ei6ip5vje2ostt6.apps.googleusercontent.com"</span>,
+  <span style="color: #2d9574;">"sub"</span>: <span style="color: #2d9574;">"106008292367253272644"</span>,
+  <span style="color: #2d9574;">"nonce"</span>: <span style="color: #2d9574;">"ly2KYOS6cyriaGNYlQ9l3GHxj98"</span>,
+  <span style="color: #2d9574;">"nbf"</span>: <span style="color: #a45bad;">1731569986</span>,
+  <span style="color: #2d9574;">"iat"</span>: <span style="color: #a45bad;">1731570286</span>,
+  <span style="color: #2d9574;">"exp"</span>: <span style="color: #a45bad;">1731573886</span>,
+  <span style="color: #2d9574;">"jti"</span>: <span style="color: #2d9574;">"65f8e3155c45cdbeb20f80fd9bc8e344762d10c7"</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+<p>
+iss (issuer): Issuer
+aud(audience): JWT Consumer (CLIENT<sub>ID</sub>)
+sub(subject): Subject (user identifier, unique for each user)
+nonce: Signature order(values generated by assembling URL parameters earlier)
+nbf (Not Before): Issued At
+iat(Issued At): Issued Time
+exp(expiration time): Expiration Time
+jti(JWT ID): JWT ID
+</p>
+
+<p>
+(Step 4-5) Generate User's Salt
+</p>
+
+<p>
+User Salt is used to eliminate the one-to-one correspondence between the OAuth
+identifier(sub) and the on-chain Sui address, avoiding linking Web2 credentials
+with Web3 credentials.
+</p>
+
+<p>
+Therefore, it is essential to safeguard the Salt. If lost, users won't be able
+to recover the address generated with the current Salt.
+</p>
+
+<p>
+The salt is unique based on iss,aud,sub upon validation of the JWT.
+</p>
+
+<p>
+User Salt: 48516934399074529949122746775580145793
+</p>
+
+<p>
+(Step 6-7) Fetch ZK Proof (Groth16)
+This is the proof (ZK Proof) for the ephemeral key pair, used to demonstrate the
+validity of the ephemeral key pair.
+</p>
+
+<p>
+The user sends the ZK proving service the JWT, user salt, ephemeral public key,
+jwt randomness, key claim name (i.e. sub). The proving service generates a
+Zero-Knowledge Proof that takes as private inputs and does the following:
+</p>
+
+<ol class="org-ol">
+<li>Checks the nonce is derived correctly as defined</li>
+<li>Checks that key claim value matches the corresponding field in the JWT</li>
+<li>Verifies the RSA signature from OP(OpenID Provider) on the JWT</li>
+<li>The address is consistent with the key claim value and user salt</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-js"><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">zkProofResult</span> = <span style="color: #4f97d7; font-weight: bold;">await</span> axios.post<span style="color: #4f97d7;">(</span>
+    <span style="color: #2d9574;">"https://prover-dev.mystenlabs.com/v1"</span>,
+    <span style="color: #bc6ec5;">{</span>
+        jwt: oauthParams?.id_token as string,
+        extendedEphemeralPublicKey: extendedEphemeralPublicKey,
+        maxEpoch: maxEpoch,
+        jwtRandomness: randomness,
+        salt: userSalt,
+        keyClaimName: <span style="color: #2d9574;">"sub"</span>,
+    <span style="color: #bc6ec5;">}</span>,
+    <span style="color: #bc6ec5;">{</span>
+        headers: <span style="color: #2d9574;">{</span>
+            <span style="color: #2d9574;">"Content-Type"</span>: <span style="color: #2d9574;">"application/json"</span>,
+        <span style="color: #2d9574;">}</span>,
+    <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">)</span>.data;
+</pre>
+</div>
+
+<p>
+Proof Results:
+</p>
+<div class="org-src-container">
+<pre class="src src-js"><span style="color: #4f97d7;">{</span>
+  <span style="color: #2d9574;">"proofPoints"</span>: <span style="color: #bc6ec5;">{</span>
+    <span style="color: #2d9574;">"a"</span>: <span style="color: #2d9574;">[</span>
+      <span style="color: #2d9574;">"3525062626418970747499393007232416691443379703891088370690682725086678319164"</span>,
+      <span style="color: #2d9574;">"5700184620676217196822847941599608247158300331959795779596479562015784206189"</span>,
+      <span style="color: #2d9574;">"1"</span>
+    <span style="color: #2d9574;">]</span>,
+    <span style="color: #2d9574;">"b"</span>: <span style="color: #2d9574;">[</span>
+      <span style="color: #67b11d;">[</span>
+        <span style="color: #2d9574;">"5442191657060540940700133709820605726134904999193509297138551917358635821358"</span>,
+        <span style="color: #2d9574;">"5255511844670804738594305696401250802779762634363789278506046713555390135252"</span>
+      <span style="color: #67b11d;">]</span>,
+      <span style="color: #67b11d;">[</span>
+        <span style="color: #2d9574;">"19187572160206632209322348078814416009802068469346941991418995952661292420549"</span>,
+        <span style="color: #2d9574;">"16333425071670130555113695152030248628825763380229357578447076279877157398048"</span>
+      <span style="color: #67b11d;">]</span>,
+      <span style="color: #67b11d;">[</span>
+        <span style="color: #2d9574;">"1"</span>,
+        <span style="color: #2d9574;">"0"</span>
+      <span style="color: #67b11d;">]</span>
+    <span style="color: #2d9574;">]</span>,
+    <span style="color: #2d9574;">"c"</span>: <span style="color: #2d9574;">[</span>
+      <span style="color: #2d9574;">"3160791984214921668507715993928470630290926423770774507180281672127854258400"</span>,
+      <span style="color: #2d9574;">"1527855699933846238951333722223847994147275875573586506296066325337951391238"</span>,
+      <span style="color: #2d9574;">"1"</span>
+    <span style="color: #2d9574;">]</span>
+  <span style="color: #bc6ec5;">}</span>,
+  <span style="color: #2d9574;">"issBase64Details"</span>: <span style="color: #bc6ec5;">{</span>
+    <span style="color: #2d9574;">"value"</span>: <span style="color: #2d9574;">"yJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLC"</span>,
+    <span style="color: #2d9574;">"indexMod4"</span>: <span style="color: #a45bad;">1</span>
+  <span style="color: #bc6ec5;">}</span>,
+  <span style="color: #2d9574;">"headerBase64"</span>: <span style="color: #2d9574;">"eyJhbGciOiJSUzI1NiIsImtpZCI6IjFkYzBmMTcyZThkNmVmMzgyZDZkM2EyMzFmNmMxOTdkZDY4Y2U1ZWYiLCJ0eXAiOiJKV1QifQ"</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+<p>
+(Step 8) Generate User's Sui address
+The user’s Sui address is determined by sub, iss, aud and user<sub>salt</sub> together.
+For the same JWT, sub, iss and aud will not change with each login.
+</p>
+
+<p>
+The address is computed on the following inputs:
+</p>
+
+<ol class="org-ol">
+<li>The address flag: <code>zk_login_flag</code> = 0x05 for zkLogin address. This serves as a
+domain separator as a signature scheme defined in crypto agility.</li>
+<li><code>kc_name_F</code> = hashBytesToField(<code>kc_name</code>, maxKCNameLen): Name of the key claim,
+e.g., sub. THe sequence of bytes is mapped to a field element in BN254 using
+hashBytesToField</li>
+<li><code>kc_value_F</code> = hashBytesToField(<code>kc_value</code>, maxKCValueLen): The value of the key
+claim mapped using hashBytesToField.</li>
+<li><code>aud_F</code> = hashBytesToField(aud, maxAudValueLen): The relying party (RP)
+identifier.</li>
+<li>iss: The OpenID Provider (OP) identifier.</li>
+<li><code>user_salt</code>: A value introduced to unlink the OAuth identifier with the
+on-chain address.</li>
+</ol>
+<p>
+Finally, we derive <code>zk_login_address</code> = <code>Blake2b_256</code> (<code>zk_login_flag</code>, <code>iss_L</code>, iss,
+<code>addr_seed</code>) where <code>addr_seed</code> = <code>Poseidon_BN254</code> (<code>kc_name_F</code>, <code>kc_value_F</code>, <code>aud_F</code>,
+<code>Poseidon_BN254</code> (<code>user_salt</code>).
+</p>
+
+<p>
+User Sui Address:
+0x7be17b6ce9a63e1a002ec6a85921d58eb8290ed982f3ed554ebd02ccd572063f
+</p>
+
+<p>
+(Step 9-10) Assemble zkLogin signature and submit the transaction.
+A transaction is signed using the ephemeral private key to generate an ephemeral
+signature. Finally, the user submits the transaction along with the ephemeral
+signature, ZK proof and other inputs to Sui.
+</p>
+<div class="org-src-container">
+<pre class="src src-js"><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">txb</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">TransactionBlock</span><span style="color: #4f97d7;">()</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Transfer 1 SUI to 0xfa0f...8a36.</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">[</span><span style="color: #7590db;">coin</span><span style="color: #4f97d7;">]</span> = txb.splitCoins<span style="color: #4f97d7;">(</span>txb.gas,<span style="color: #bc6ec5;">[</span>MIST_PER_SUI * <span style="color: #a45bad;">1n</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)</span>;
+txb.transferObjects<span style="color: #4f97d7;">(</span>
+    <span style="color: #bc6ec5;">[</span>coin<span style="color: #bc6ec5;">]</span>,
+    <span style="color: #2d9574;">"0xfa0f8542f256e669694624aa3ee7bfbde5af54641646a3a05924cf9e329a8a36"</span>
+<span style="color: #4f97d7;">)</span>;
+txb.setSender<span style="color: #4f97d7;">(</span>zkLoginUserAddress<span style="color: #4f97d7;">)</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">{</span> bytes, signature: userSignature <span style="color: #4f97d7;">}</span> = <span style="color: #4f97d7; font-weight: bold;">await</span> txb.sign<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">{</span>
+    client,
+    signer: ephemeralKeyPair
+<span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Generate addressSeed using userSalt, sub, and aud (JWT Payload)</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">as parameters for obtaining zkLoginSignature</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">addressSeed</span>: string = genAddressSeed<span style="color: #4f97d7;">(</span>
+    BigInt<span style="color: #bc6ec5;">(</span>userSalt<span style="color: #bc6ec5;">)</span>,
+    <span style="color: #2d9574;">"sub"</span>,
+    decodedJwt.sub,
+    decodedJwt.aud
+<span style="color: #4f97d7;">)</span>.toString<span style="color: #4f97d7;">()</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">partialZkLoginSignature()</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">zkLoginSignature</span>: SerializedSignature = getZkLoginSignature<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">{</span>
+    inputs: <span style="color: #2d9574;">{</span>
+        ...partialZkLoginSignature,
+        addressSeed,
+    <span style="color: #2d9574;">}</span>,
+    maxEpoch,
+    userSignature,
+<span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Execute transaction</span>
+suiClient.executeTransactionBlock<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">{</span>
+    transactionBlock: bytes,
+    signature: zkLoginSignature,
+<span style="color: #bc6ec5;">}</span><span style="color: #4f97d7;">)</span>;
+</pre>
+</div>
+
+
+<p>
+(After Step 10) After submitted on chain, Sui Authorities verify the ZK proof
+against the provider JWKs from storage (agreed upon in consensus) and also the
+ephemeral signature.
+</p>
+
+<p>
+Execution successful: BGZni1cGMeAu4nPPETQdstDiYPoctu6TnL3u5sb9X2Dy (transaction hash)
+</p>
+</div>
+</div>
+<div id="outline-container-org284d644" class="outline-4">
+<h4 id="org284d644"><span class="section-number-4">1.3.2.</span> Entities</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ol class="org-ol">
+<li>Application frontend: This describes the wallet or frontend application that
+supports zkLogin. This frontend is responsible for storing the ephemeral
+private key, directing users to complete the OAuth login flow, creating and
+signing a zkLogin transaction.</li>
+<li>Salt Backup Service: This is a backend service responsible for returning a
+salt per unique user. There are several options for the applications to
+maintain the user salt:
+<ol class="org-ol">
+<li>Client side:
+<ol class="org-ol">
+<li>Option 1: Request user input for the salt during wallet
+access,transferring the responsibility to the user, who must then
+remember it.</li>
+<li>Option 2: Browser or Mobile Storage: Ensure proper workflows to
+prevent users from losing wallet access during device or browser
+changes. One approach is to email the salt during the new wallet
+setup.</li>
+</ol></li>
+<li>Backend service that exposes an endpoint that returns a unique salt for
+each user consistently.
+<ol class="org-ol">
+<li>Option 3: Store mapping from user identifier (e.g. sub) to user salt
+in a conventional database. The salt is unique per user</li>
+<li>Option 4: Implements a service that keeps a master seed value, and
+derives a user salt with key derivation by validating and parsing the
+JWT.For example, use HKDF(ikm = seed, salt = iss || aud, info = sub)
+defined here. Note that this option does not allow any rotation on
+master seed or change in client ID (i.e. aud), otherwise a different
+user address will be derived and will result in loss of funds.</li>
+</ol></li>
+</ol></li>
+<li>ZK Proving Service: This is a backend service responsible for generating ZK
+proofs based on JWT, JWT randomness, user salt and max epoch. This proof is
+submitted on-chain along with the ephemeral signature for a zkLogin
+transaction.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf8b51dd" class="outline-3">
+<h3 id="orgf8b51dd"><span class="section-number-3">1.4.</span> Sui zkLogin vs Polygon Did vs Fireblocks Ncw</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Here’s a comparison table for <b><b>Sui zkLogin</b></b>, <b><b>Polygon DID</b></b>, and
+<b><b>Fireblocks Networked Custody Wallet (NCW)</b></b>.
+</p>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Feature</th>
+<th scope="col" class="org-left">Sui zkLogin</th>
+<th scope="col" class="org-left">Polygon DID</th>
+<th scope="col" class="org-left">Fireblocks NCW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b><b>Purpose</b></b></td>
+<td class="org-left">Provides decentralized login and sign transactions using zero-knowledge proofs</td>
+<td class="org-left">Offers decentralized identity and credential verification</td>
+<td class="org-left">Offers secure wallet infrastructure for institutions</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Authentication Mechanism</b></b></td>
+<td class="org-left">Zero-Knowledge Proofs (zk-SNARKs)</td>
+<td class="org-left">DID (Decentralized Identifier) standard</td>
+<td class="org-left">Multi-party computation (MPC) and secure wallet setup</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Target Users</b></b></td>
+<td class="org-left">Developers, dApps requiring secure, privacy-oriented login and web2 experiance</td>
+<td class="org-left">Developers, apps needing identity verification</td>
+<td class="org-left">Institutional investors, asset managers, enterprises</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Privacy Focus</b></b></td>
+<td class="org-left">High (uses zk-SNARKs for user privacy)</td>
+<td class="org-left">Moderate (privacy in credential sharing)</td>
+<td class="org-left">Moderate (focus on security and compliance)</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Blockchain Compatibility</b></b></td>
+<td class="org-left">Sui blockchain</td>
+<td class="org-left">Ethereum (Polygon network), EVM-compatible chains</td>
+<td class="org-left">Supports multiple blockchains</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Use Case Examples</b></b></td>
+<td class="org-left">User login, anonymous data access, sign transactions</td>
+<td class="org-left">Verifiable credentials, identity management</td>
+<td class="org-left">Custody, staking, DeFi access for institutional funds</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Integration Ease</b></b></td>
+<td class="org-left">SDKs and APIs available for Sui</td>
+<td class="org-left">Compatible with standard DID protocols</td>
+<td class="org-left">API and SDK for enterprise-level integration</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Security</b></b></td>
+<td class="org-left">High, with cryptographic privacy and security</td>
+<td class="org-left">Secure but relies on DID standards</td>
+<td class="org-left">Very high, with multi-layered security architecture</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Compliance Features</b></b></td>
+<td class="org-left">Minimal focus on regulatory compliance</td>
+<td class="org-left">Limited compliance, depending on app use</td>
+<td class="org-left">High compliance with institutional regulatory standards</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Cost Consideration</b></b></td>
+<td class="org-left">May involve transaction fees on Sui</td>
+<td class="org-left">Gas fees on Ethereum/Polygon</td>
+<td class="org-left">Enterprise-grade pricing, higher costs</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Main Advantage</b></b></td>
+<td class="org-left">Strong privacy with zero-knowledge tech</td>
+<td class="org-left">Interoperability with DID standards</td>
+<td class="org-left">Robust security and custody features for institutions</td>
+</tr>
+
+<tr>
+<td class="org-left"><b><b>Main Limitation</b></b></td>
+<td class="org-left">Limited to Sui ecosystem</td>
+<td class="org-left">Mostly limited to EVM-based chains</td>
+<td class="org-left">Primarily for institutional clients, less suited for general use</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: yang zhe</p>
+<p class="date">Created: 2024-11-18 一 10:10</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
